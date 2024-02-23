@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @font-face {
+    font-family: nildoriah;
+    src: url(./LiNiladriRongtuliUnicode-Regular.ttf);
+  }
+  @font-face {
+    font-family: kalpurus;
+    src: url(./kalpurush.ttf);
+  }
+*
+        {
+            margin:00px;
+            padding: 00px;
+            
+        }
+        .container
+        {
+            height: 100vh;
+            width: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+            flex-direction: row;
+
+            
+
+        }
+        .container2
+        {
+            height: 75vh;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+            flex-direction: row;
+
+            
+
+        }
+        .font
+        {
+            
+            height: 375px;
+            width:225px;
+            position: relative;
+            border-radius:10px;
+            background-image:url('ecardbgfinal.png');
+            background-size: 225px 375px;
+            background-repeat: no-repeat;
+        }
+        .font2
+        {
+            
+            height: 375px;
+            width:225px;
+            position: relative;
+            border-radius:10px;
+            background-image:url('./ecardbgfinal-back.png');
+            background-size: 225px 375px;
+            background-repeat: no-repeat;
+        }
+        
+        .institut{
+            color:rgb(0, 0, 0);
+            font-size:12px;
+            position: absolute;
+            font-family: nildoriah;
+            top: 25px;
+            left: 60px;
+            color:rgb(0, 0, 0);
+        }
+
+        .tab {padding-right:30px;}
+        .edetails{
+            position: absolute;
+            top: 240px;
+            line-height: 15px;
+            left: 15px;
+            text-transform:capitalize;
+            font-family: kalpurus;
+            font-size: 12px;
+            text-emphasis: spacing;
+            margin-left: 5px;
+        }
+        .top img
+        {
+            height: 90px;
+            width:90px;
+            background-color:#d3760c;
+            border-radius:99px;
+            position: absolute;
+            top: 70px;
+            left: 65px;
+            object-fit: content;
+            border:4px solid rgba(255 , 255 , 255 , .2);
+            
+        }
+        .ename{
+            position: absolute;
+            font-family: nildoriah;
+            top: 170px;
+            left: 65px;
+            color:rgb(0, 0, 0);
+            font-size:22px;
+        }
+        .Back_detail
+        {
+            position: absolute;
+            top: 23px;
+            line-height: 13px;
+            left: 60px;
+            text-transform:capitalize;
+            font-family: kalpurus;
+            font-size: 10px;
+            text-emphasis: spacing;
+            margin-left: 5px;
+        }
+        .signature{
+            position: absolute;
+            top: 78%;
+            height: 80px;
+            width: 160px;
+        }
+        .signature img{
+
+            height: 30px;
+            width: 90px;
+            margin: 30px 00px 00px 65px;
+            border-radius: 7px;
+          
+        }
+
+
+        .barcode img
+        {
+            height: 65px;
+            width: 65px;
+            text-align: center;
+            margin:5px;
+            
+        }
+        .barcode
+        {
+            text-align: center;
+            position: absolute;
+            top:62.5%;
+            left: 135px;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <!-- font id design -->
+    <div class="container">
+        <div class="padding">
+        <div class="font">
+            <!-- <div class="institut">বরিশাল পলিটেকনিক ইন্সটিটিউট</div> -->
+            <div class="top">
+                <img src="https://avatars.githubusercontent.com/u/89521172?s=96&v=4" alt="">
+            </div>
+            <div class="">
+                <div class="ename">
+                <p class="p1"><b>@NAME</b></p>
+                
+                </div>
+
+                <div class="edetails">
+                    <P><b>পিতার নাম : @Father_name</b></P>
+                    <p><b>মাতার নাম : @Mother_name</b></p>
+                    <P><b>টেকনোলজি : @Tecnologi</b></P>
+                    <p><b>সেশন : @Seson</b></p>
+                    
+                    
+                </div>
+                <div class="signature">
+                    <img src="./pngwing.com.png" alt="">
+                </div>
+          
+            </div>
+        </div>
+    </div>
+    <!-- Back sid of this id -->
+    <div class="container2">
+        <div class="font2">
+                <div class="Back_detail">
+                    <b>
+                    <P>ক্লাস রোল : @ClassRoll</P>
+                    <p>বোর্ড রোল : @Bord_roll</p>
+                    <p>রেজিঃ নম্বর: @Rag_num</p>
+                </b>
+        </div>
+        
+    </div>
+       
+    </div>
+</body>
+</html>
