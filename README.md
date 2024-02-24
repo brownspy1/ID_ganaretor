@@ -40,7 +40,7 @@ For Windows users, an executable (`.exe`) file is available at [ID Ganaretor.exe
 ## Tutorial
 
 ## Screenshot
-![Screenshot](https://github.com/brownspy1/)
+![Screenshot](https://github.com/brownspy1/ID_ganaretor/blob/main/Assats/Mockup.png)
 
 ## Contributing
 
