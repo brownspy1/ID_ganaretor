@@ -1,185 +1,129 @@
 import pyfiglet
+import Font_side
+import Backsid
 import hashr
-class Bpi_Id_ganaretor:
-    print('''╔╗╔╗╔╗    ╔╗                     ╔════╗          ╔═══╗             ╔═══╗                      ╔╗        ╔╗
+import Pymarg
+import csv
+
+print('''╔╗╔╗╔╗    ╔╗                     ╔════╗          ╔═══╗             ╔═══╗                      ╔╗        ╔╗
 ║║║║║║    ║║                     ║╔╗╔╗║          ╚╗╔╗║             ║╔═╗║                     ╔╝╚╗       ║║
 ║║║║║║╔══╗║║ ╔══╗╔══╗╔╗╔╗╔══╗    ╚╝║║╚╝╔══╗    ╔╗ ║║║║             ║║ ╚╝╔══╗ ╔═╗ ╔══╗ ╔═╗╔══╗╚╗╔╝╔══╗╔═╗║║
 ║╚╝╚╝║║╔╗║║║ ║╔═╝║╔╗║║╚╝║║╔╗║      ║║  ║╔╗║    ╠╣ ║║║║    ╔═══╗    ║║╔═╗╚ ╗║ ║╔╗╗╚ ╗║ ║╔╝║╔╗║ ║║ ║╔╗║║╔╝╚╝
 ╚╗╔╗╔╝║║═╣║╚╗║╚═╗║╚╝║║║║║║║═╣     ╔╝╚╗ ║╚╝║    ║║╔╝╚╝║    ╚═══╝    ║╚╩═║║╚╝╚╗║║║║║╚╝╚╗║║ ║║═╣ ║╚╗║╚╝║║║ ╔╗
- ╚╝╚╝ ╚══╝╚═╝╚══╝╚══╝╚╩╩╝╚══╝     ╚══╝ ╚══╝    ╚╝╚═══╝             ╚═══╝╚═══╝╚╝╚╝╚═══╝╚╝ ╚══╝ ╚═╝╚══╝╚╝ ╚╝
-                                                                                                          
-                                                                                                          
+ ╚╝╚╝ ╚══╝╚═╝╚══╝╚══╝╚╩╩╝╚══╝     ╚══╝ ╚══╝    ╚╝╚═══╝             ╚═══╝╚═══╝╚╝╚╝╚═══╝╚╝ ╚══╝ ╚═╝╚══╝╚╝ ╚╝                                                                                          
 ''')
 
-    def __init__(self, name, father_name, mother_name, seson, tecnologi, class_roll, bord_roll, rag_num):
-        self.Name = name
-        self.Father_name = father_name
-        self.Mother_name = mother_name
-        self.Seson = seson
-        self.Tecnologi = tecnologi
-        self.ClassRoll = class_roll
-        self.Bord_roll = bord_roll
-        self.Rag_num = rag_num
 
-    def Ganaret_id_simpal(self):
-        html = r"""<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-* {
-    margin: 0;
-    padding: 0;
-}
+# Function to save data to CSV
+def save_to_csv(Name, Father_name, Mother_name, Seson, Tecnologi, ClassRoll, Bord_roll, Rag_num, Photo):
+    with open('student_data.csv', 'w', newline='', encoding='utf-8') as file:  # Use 'w' mode to overwrite the file
+        fieldnames = ['Name', 'Father Name', 'Mother Name', 'Session', 'Tecnologi', 'Class roll',
+                      'Bord Roll', 'Rag Number', 'Photo']
+        writer = csv.DictWriter(file, fieldnames=fieldnames)
 
-.container {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    flex-direction: row;
-}
+        writer.writeheader()  # Write the header row
 
-.font {
-    height: 375px;
-    width: 225px;
-    position: relative;
-    border-radius: 10px;
-    background-image: url('https://idgenaret.000webhostapp.com/ecardbgfinal.png');
-    background-size: 225px 375px;
-    background-repeat: no-repeat;
-}
+        writer.writerow({
+            'Bord Roll': Bord_roll, 'Name': Name, 'Father Name': Father_name,
+            'Mother Name': Mother_name, 'Session': Seson, 'Tecnologi': Tecnologi,
+            'Class roll': ClassRoll, 'Rag Number': Rag_num, 'Photo': Photo
+        })
+def Bangla():
+    get_data = input("1.Creat ID card"
+                     "\n2.Marg ID in One PDF file"
+                     "\nEnter your choice (1-2):")
+    if get_data == "1":
+        print("Please write all in Bengali")
+        # Name = input("Enter your Name:")
+        # Father_name = input("Enter your Father Name :")
+        # Mother_name = input("Enter your Mother Name :")
+        # Seson = input("Seson:")
+        # Tecnologi = input("Tecnologi:")
+        # ClassRoll = int(input("ClassRoll:"))
+        # Bord_roll = int(input("Bord_roll:"))
+        # Rag_num = int(input("Rag Number:"))
+        # _Photo = input("Entar your Bord roll [In English]")
+        # image = f"photo/{_Photo}.jpg"
+        # Photo = hashr.image_to_url(image)
+        # Font_side.make_png_id_bangla(Name, Father_name, Mother_name, Seson, Tecnologi, Bord_roll, Photo)
+        # Backsid.make_png_id_bangla(ClassRoll, Bord_roll, Rag_num)
+        # print("Congratulations! your id generated successfully!")
 
-.edetails {
-    position: absolute;
-    top: 240px;
-    line-height: 15px;
-    left: 15px;
-    text-transform: capitalize;
-    font-family: 'Kalpurush', sans-serif;
-    font-size: 12px;
-    letter-spacing: 1px; /* Changed 'text-emphasis' to 'letter-spacing' */
-    margin-left: 5px;
-}
+        # # init value for testing
 
-.top img {
-    height: 90px;
-    width: 90px;
-    background-color: #d3760c;
-    border-radius: 50%; /* Changed '99px' to '50%' */
-    position: absolute;
-    top: 70px;
-    left: 65px;
-    object-fit: cover; /* Changed 'content' to 'cover' */
-    border: 4px solid rgba(255 , 255 , 255 , .2);
-}
+        Name = "মোঃ মেহেদী"
+        Father_name = "মোঃ মোয়াজ্জেম বিশ্বাস"
+        Mother_name = "মোসাঃ কাজল রেখা"
+        Seson = "২২-২৩"
+        Tecnologi = "কম্পিউটার"
+        ClassRoll = "২২৩৬৭৮"
+        Bord_roll = "৭৪৩৬৭৮"
+        Rag_num = "১৫০২২৬৮৬৭৪"
+        _Photo = "743678"
+        image = f"photo/{_Photo}.jpg"
+        Photo = hashr.image_to_url(image)
+        Font_side.make_png_id_bangla(Name, Father_name, Mother_name, Seson, Tecnologi, Bord_roll, Photo)
+        Backsid.make_png_id_bangla(ClassRoll, Bord_roll, Rag_num)
+        print("Congratulations! your id generated successfully!")
+    elif get_data == "2":
+        Bord_roll = input("Your Bord Roll [in Bangla]: ")
+        Pymarg.marge(f"Id Card/font_{Bord_roll}.pdf", f"Id Card/back_{Bord_roll}.pdf", Bord_roll)
+def English():
+    get_data = input("1.Creat ID card"
+                     "\n2.Marg ID in One PDF file"
+                     "\nEnter your choice (1-2):")
+    if get_data == "1":
+        print("Please write all in English")
+        # Name = input("Name:")
+        # Father_name = input("Father Name :")
+        # Mother_name = input("Mother Name :")
+        # Seson = input("Seson:")
+        # Tecnologi = input("Tecnologi:")
+        # ClassRoll = int(input("ClassRoll:"))
+        # Bord_roll = int(input("Bord_roll:"))
+        # Rag_num = int(input("Rag Number:"))
+        # image = f"photo/{Bord_roll}.jpg"
+        # Photo = hashr.image_to_url(image)
+        # Font_side.make_png_id_english(Name, Father_name, Mother_name, Seson, Tecnologi, Bord_roll, Photo)
+        # Backsid.make_png_id_english(ClassRoll, Bord_roll, Rag_num)
+        # save_to_csv(Name, Father_name, Mother_name, Seson, Tecnologi, ClassRoll, Bord_roll, Rag_num, Photo)
+        # print(f"Congratulations! your id generated successfully! check {image}")
 
-.ename {
-    position: absolute;
-    font-family: "Li Niladri Rongtuli Unicode",sans-serif;
-    top: 170px;
-    left: 65px;
-    color: rgb(0, 0, 0);
-    font-size: 22px;
-}
-
-.signature {
-    position: absolute;
-    top: 78%;
-    height: 80px;
-    width: 160px;
-}
-
-.signature img {
-    height: 30px;
-    width: 90px;
-    margin: 30px 0 0 65px;
-    border-radius: 7px;
-}
-    </style>
-</head>
-<body>
-    <!-- font id design -->
-    <div class="container">
-        <div class="padding">
-            <div class="font">
-                <div class="top">
-                    <img src="file:///C:\Users\mh013\OneDrive\Documents\GitHub\ID_ganaretor\photo\743678.jpg" alt="user_photo">
-                </div>
-                <div class="">
-                    <div class="ename">
-                        <p class="p1"><b>@NAME</b></p>
-                    </div>
-                    <div class="edetails">
-                        <p><b>পিতার নাম : @Father_name</b></p>
-                        <p><b>মাতার নাম : @Mother_name</b></p>
-                        <p><b>টেকনোলজি : @Tecnologi</b></p>
-                        <p><b>সেশন : @Seson</b></p>
-                    </div>
-                    <div class="signature">
-                        <img src="https://idgenaret.000webhostapp.com/web/pngwing.com.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-</html>"""
-        html = html.replace("@NAME", self.Name)
-        html = html.replace("@Father_name", self.Father_name)
-        html = html.replace("@Mother_name", self.Mother_name)
-        html = html.replace("@Seson", self.Seson)
-        html = html.replace("@Tecnologi", self.Tecnologi)
-        html = html.replace("@ClassRoll", str(self.ClassRoll))
-        html = html.replace("@Bord_roll", str(self.Bord_roll))
-        html = html.replace("@Rag_num", str(self.Rag_num))
-        print("Congratulations! Your id is save to your storge!")
-
+        # # init value for testing
+        Name = "M.Mahadi"
+        Father_name = "M.Mozzem Bissas"
+        Mother_name = "MST.Kazol Rekha"
+        Seson = "2022-23"
+        Tecnologi = "CST"
+        ClassRoll = "2285133"
+        Bord_roll = "743678"
+        Rag_num = "1532982354"
+        image = f"photo/{Bord_roll}.jpg"
+        Photo = hashr.image_to_url(image)
+        Font_side.make_png_id_english(Name, Father_name, Mother_name, Seson, Tecnologi, Bord_roll, Photo)
+        Backsid.make_png_id_english(ClassRoll, Bord_roll, Rag_num)
+        save_to_csv(Name, Father_name, Mother_name, Seson, Tecnologi, ClassRoll, Bord_roll, Rag_num, Photo)
+        print("Congratulations! your id generated successfully!")
+    elif get_data == "2":
+        Bord_roll = input("Your Bord Roll [in Bangla]: ")
+        Pymarg.marge(f"Id Card/font_{Bord_roll}.pdf", f"Id Card/back_{Bord_roll}.pdf", Bord_roll)
 
 def main():
     while True:
-
-        Choise = input("\n1.V1[Simpal]"
-                       "\n2.V2[Modarn + Qr code]"
-                       "\n3.V3[With online profile]"
-                       "\nEnter your choice (1-3):")
+        Choise = input("\n1.Bangla ID Card"
+                       "\n2.English ID Card"
+                       "\n3.Both ID Card"
+                       "\n4.Exit:"
+                       "\nEnter your choice (1-4):")
         if Choise == "1":
-            # Name = input("Enter your Name:")
-            # Father_name = input("Enter your Father Name :")
-            # Mother_name = input("Enter your Mother Name :")
-            # Seson = input("Seson:")
-            # Tecnologi = input("Tecnologi:")
-            # ClassRoll = int(input("ClassRoll:"))
-            # Bord_roll = int(input("Bord_roll:"))
-            # Rag_num = int(input("Rag Number:"))
-            # constant valu for testing
-            Name = "মোঃ মেহেদী"
-            Father_name = "মোঃ মোয়াজ্জেম বিশ্বাস"
-            Mother_name = "মোসাঃ কাজল রেখা"
-            Seson = "২২-২৩"
-            Tecnologi = "কম্পিউটার"
-            ClassRoll = "২২৩৬৭৮"
-            Bord_roll = "৭৪৩৬৭৮"
-            Rag_num = "১৫০২২৬৮৬৭৪"
-
-            detail = Bpi_Id_ganaretor(Name,
-                                      Father_name,
-                                      Mother_name,
-                                      Seson,
-                                      Tecnologi,
-                                      ClassRoll,
-                                      Bord_roll,
-                                      Rag_num)
-
-            detail.Ganaret_id_simpal()
+            banar = pyfiglet.figlet_format("BANGLA ID")
+            print(banar)
+            Bangla()
 
         elif Choise == "2":
-            banar = pyfiglet.figlet_format("Undar constracson!")
+            banar = pyfiglet.figlet_format("ENGLISH ID")
             print(banar)
+            English()
         elif Choise == "3":
             banar = pyfiglet.figlet_format("Comming!")
             print(banar)
