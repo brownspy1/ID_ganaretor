@@ -255,8 +255,8 @@ def make_png_id_english(name, father, mother, tecnologi, seson, bordroll, photo)
     font_page = font_page.replace("@Tecnologi", tecnologi)
     font_page = font_page.replace("@PHOTO", photo)
     # v set save path
-    output_image_path_png = f"Id Card/font_{bordroll}.png"
-    output_image_path_pdf = f"Id Card/font_{bordroll}.pdf"
+    output_image_path_png = f"Id Card/English_font_{bordroll}.png"
+    output_image_path_pdf = f"Id Card/English_font_{bordroll}.pdf"
 
     # Convert HTML to image
     hti = Html2Image()
