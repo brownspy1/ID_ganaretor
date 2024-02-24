@@ -1,6 +1,0 @@
-pillow==10.2.0
-pyfiglet==1.0.2
-html2image==2.0.4.3
-pypdf==4.0.2
-csv==1.0
-qrcode==7.4.2

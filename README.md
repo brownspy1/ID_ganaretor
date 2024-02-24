@@ -1,70 +1,64 @@
-Certainly! Below is the full Markdown code incorporating all the necessary sections, including installation instructions, credits, and a link to the executable file:
+# ID Card Generates
 
-```markdown
-# ID Card Generator
-
-This Python script generates ID cards with various options such as Bangla ID card, English ID card, and ID card with QR code. It provides an interactive interface for users to input their information and generate customized ID cards.
-
+This tool generates a student ID card using user input and a pre-defined photo from the folder. It creates two versions of the card - a PNG and a PDF.
 ## Features
 
-- **Bangla ID Card**: Allows users to input their information in Bengali and generates an ID card in Bengali language.
-- **English ID Card**: Allows users to input their information in English and generates an ID card in English language.
-- **ID Card with QR Code**: Generates an ID card with a QR code containing the user's information.
+- Generate ID Cards: The program allows users to generate ID cards in either Bengali or English language.
 
-## Installation
+- Customization: Users can input personal details such as name, father's name, mother's name, session, technology, class roll, board roll, and rag number.
 
-1. Clone the repository:
+- Image Handling: Users can provide a photo which is then processed and included in the ID card.
 
-```bash
-git clone https://github.com/brownspy1/ID_ganaretor
-```
+- QR Code Integration: The program supports generating QR codes containing the provided information, such as name, board roll, rag number, session, and technology.
 
-2. Install dependencies:
+- CSV Data Storage: User data is stored in a CSV file (student_data.csv) for further reference.
 
-```bash
-pip install -r requirements.txt
-```
+- Modularity: The code is organized into functions, enhancing readability and maintainability.
 
-3. Run the script:
+- User Interaction: The program provides a simple text-based interface for users to input their choices and details.
 
-```bash
-python main.py
-```
+- Localization: Supports both Bengali and English languages for inputting personal details.
 
-## Usage
+- PDF Generation: It merges the front and back sides of the ID card into a single PDF file.
 
-1. Run the script.
-2. Choose the type of ID card you want to generate.
-3. Follow the prompts to input your information.
-4. The script will generate the ID card based on your input.
+## Installation (Kali and Termux)
+
+1. Clone this repository: `git clone https://github.com/brownspy1/ID_ganaretor`
+2. Navigate to the project directory: `cd ID_ganaretor`
+3. Install dependencies : `pip install -r requirements.txt`
+4Run the main program: `python main.py`
+
+## Windows
+
+For Windows users, an executable (`.exe`) file is available at [ID Ganaretor.exe](https://github.com/brownspy1/ID_ganaretor/raw/main/ID%20Ganaretor.exe).
 
 ## Dependencies
 
-- `Font_side.py`: Module for generating the front side of the ID card.
-- `Backsid.py`: Module for generating the back side of the ID card.
-- `hashr.py`: Module for handling image hashing and URL generation.
-- `Pymarg.py`: Module for merging PDF files.
-- `csv`: Module for handling CSV files.
-- `qrcode`: Module for generating QR codes.
+- Python 3.12
 
-## Example
 
-```bash
-# Example usage
-python main.py
-```
+## Tutorial
 
-## Notes
+## Screenshot
+![Screenshot](https://github.com/brownspy1/)
 
-- Ensure that you have all the necessary dependencies installed before running the script.
+## Contributing
+
+Contributions are welcome! Feel free to open issues and submit pull requests.
 
 ## Credits
 
-- Created by [M.Mahadi](https://fb.com/brownspy2)
+- [M.Mahadi](https://github.com/brownspy1) - Project Developer
+<h3 align="left">Connect with me:</h3>
+<p align="left">
+<a href="https://twitter.com/brownspy1" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="brownspy1" height="30" width="40" /></a>
+<a href="https://linkedin.com/in/m-mahadi-hasan-aa8422228" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="m-mahadi-hasan-aa8422228" height="30" width="40" /></a>
+<a href="https://fb.com/brownspy1" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="brownspy1" height="30" width="40" /></a>
+<a href="https://instagram.com/brownspy1" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="brownspy1" height="30" width="40" /></a>
+<a href="https://www.youtube.com/c/brownspy1" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="brownspy1" height="30" width="40" /></a>
+<a href="https://discord.gg/brownspy1" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/discord.svg" alt="brownspy1" height="30" width="40" /></a>
+</p>
 
-## Executable File
 
-You can download the executable file [here](https://github.com/brownspy1/ID_ganaretor/raw/main/ID%20Ganaretor.exe).
-```
-
-Replace `<repository_url>` with the URL of your repository, and replace `link_to_your_website` and `link_to_exe_file` with appropriate links. This markdown file provides a comprehensive guide for users, including installation instructions, usage details, dependencies, credits, and a link to the executable file.
+<h3 align="left">Support:</h3>
+<p><a href="https://www.buymeacoffee.com/brownspy1"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="brownspy1" /></a></p><br><br>
