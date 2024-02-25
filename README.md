@@ -25,8 +25,8 @@ This tool generates a student ID card using user input and a pre-defined photo f
 
 1. Clone this repository: `git clone https://github.com/brownspy1/ID_ganaretor`
 2. Navigate to the project directory: `cd ID_ganaretor`
-3. Install dependencies : `pip install -r requirements.txt`
-4Run the main program: `python main.py`
+3. Install dependencies: `pip install -r requirements.txt`
+4. Run the main program: `python main.py`
 
 ## Windows
 
