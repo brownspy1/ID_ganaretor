@@ -12,7 +12,7 @@ print('''╔╗╔╗╔╗    ╔╗                     ╔════╗    
 
 
 # Function to save data to CSV
-def save_to_csv(Name, Father_name, Mother_name, Seson, Tecnologi, ClassRoll, Bord_roll, Rag_num, Photo):
+def save_to_csv(Name, Father_name, Mother_name, Seson, Tecnologi, ClassRoll, Bord_roll, Rag_num):
     with open('student_data.csv', 'w', newline='', encoding='utf-8') as file:  # Use 'w' mode to overwrite the file
         fieldnames = ['Name', 'Father Name', 'Mother Name', 'Session', 'Tecnologi', 'Class roll',
                       'Bord Roll', 'Rag Number']
@@ -81,36 +81,36 @@ def English():
                      "\nEnter your choice (1-2):")
     if get_data == "1":
         print("Please write all in English")
-        # Name = input("Name:")
-        # Father_name = input("Father Name :")
-        # Mother_name = input("Mother Name :")
-        # Seson = input("Seson:")
-        # Tecnologi = input("Tecnologi:")
-        # ClassRoll = int(input("ClassRoll:"))
-        # Bord_roll = int(input("Bord_roll:"))
-        # Rag_num = int(input("Rag Number:"))
-        # image = f"photo/{Bord_roll}.jpg"
-        # Photo = id_genaretor.image_to_url(image)
-        # id_genaretor.make_png_id_english(Name, Father_name, Mother_name, Seson, Tecnologi, Bord_roll, Photo)
-        # id_genaretor.back_make_png_id_english(ClassRoll, Bord_roll, Rag_num)
-        # save_to_csv(Name, Father_name, Mother_name, Seson, Tecnologi, ClassRoll, Bord_roll, Rag_num)
-        # print(f"Congratulations! your id generated successfully! check {image}")
-
-        # # init value for testing
-        Name = "M.Mahadi"
-        Father_name = "M.Mozzem Bissas"
-        Mother_name = "MST.Kazol Rekha"
-        Seson = "2022-23"
-        Tecnologi = "CST"
-        ClassRoll = "2285133"
-        Bord_roll = "743678"
-        Rag_num = "1532982354"
+        Name = input("Name:")
+        Father_name = input("Father Name :")
+        Mother_name = input("Mother Name :")
+        Seson = input("Seson:")
+        Tecnologi = input("Tecnologi:")
+        ClassRoll = int(input("ClassRoll:"))
+        Bord_roll = int(input("Bord_roll:"))
+        Rag_num = int(input("Rag Number:"))
         image = f"photo/{Bord_roll}.jpg"
         Photo = id_genaretor.image_to_url(image)
         id_genaretor.make_png_id_english(Name, Father_name, Mother_name, Seson, Tecnologi, Bord_roll, Photo)
         id_genaretor.back_make_png_id_english(ClassRoll, Bord_roll, Rag_num)
-        save_to_csv(Name, Father_name, Mother_name, Seson, Tecnologi, ClassRoll, Bord_roll, Rag_num, Photo)
-        print("Congratulations! your id generated successfully!")
+        save_to_csv(Name, Father_name, Mother_name, Seson, Tecnologi, ClassRoll, Bord_roll, Rag_num)
+        print(f"Congratulations! your id generated successfully! check {image}")
+
+        # # # init value for testing
+        # Name = "M.Mahadi"
+        # Father_name = "M.Mozzem Bissas"
+        # Mother_name = "MST.Kazol Rekha"
+        # Seson = "2022-23"
+        # Tecnologi = "CST"
+        # ClassRoll = "2285133"
+        # Bord_roll = "743678"
+        # Rag_num = "1532982354"
+        # image = f"photo/{Bord_roll}.jpg"
+        # Photo = id_genaretor.image_to_url(image)
+        # id_genaretor.make_png_id_english(Name, Father_name, Mother_name, Seson, Tecnologi, Bord_roll, Photo)
+        # id_genaretor.back_make_png_id_english(ClassRoll, Bord_roll, Rag_num)
+        # save_to_csv(Name, Father_name, Mother_name, Seson, Tecnologi, ClassRoll, Bord_roll, Rag_num, Photo)
+        # print("Congratulations! your id generated successfully!")
     elif get_data == "2":
         Bord_roll = input("Your Bord Roll [in Bangla]: ")
         id_genaretor.marge(f"Id Card/font_{Bord_roll}.pdf", f"Id Card/back_{Bord_roll}.pdf", Bord_roll)
@@ -165,8 +165,7 @@ def main():
 ▓   ▓▓▓▓▓▓▓▓   ▓▓   ▓  ▓▓▓   ▓   ▓   ▓▓▓    ▓▓   ▓▓  ▓
 ▓   ▓▓▓▓▓▓▓▓   ▓▓   ▓    ▓   ▓   ▓   ▓▓▓▓▓   ▓  ▓▓▓   
 █         █    ██   █████   ██   █   █      ██  ███   
-███████████████████████    ███████████████████████████
-""")
+███████████████████████    ███████████████████████████""")
             English()
         elif Choise == "3":
             print("""███████╗ ██████╗  ██████╗ ███╗   ██╗██╗
